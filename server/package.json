@@ -1,16 +1,28 @@
 {
-  "name": "doom-scroller",
-  "version": "0.0.0",
-  "private": true,
+
+  "name": "doom-scroller-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node server.js",
+    "watch": "nodemon",
+    "seed": "node config/seeds.js"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "cookie-parser": "~1.4.4",
-    "debug": "~2.6.9",
-    "express": "~4.16.1",
-    "http-errors": "~1.6.3",
-    "jade": "~1.11.0",
-    "morgan": "~1.9.1"
+    "apollo-server-express": "^3.6.1",
+    "bcrypt": "^4.0.1",
+    "express": "^4.17.2",
+    "graphql": "^16.3.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^7.0.2",
+    "stripe": "^8.67.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+
   }
 }
