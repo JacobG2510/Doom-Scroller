@@ -13,6 +13,23 @@ root.render(
   </React.StrictMode>
 );
 
+//import axios from 'axios';
+
+// Inside your component or function
+//const fetchDataFromZillow = async () => {
+  //try {
+   // const response = await axios.post('/zillow', {
+     // address: '123 Main St',
+     // minPrice: 100000,
+     // maxPrice: 200000,
+   // });
+    //const zillowData = response.data;
+    // Do something with the data, e.g., update state
+ // } catch (error) {
+    // Handle errors
+ // }
+//};
+
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
