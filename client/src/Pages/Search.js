@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './Search.css'; // Import the CSS file
 import SingleResult from '../Components/SingleResult';
-const apiURL="http://localhost:3001"
+const apiURL="http://localhost:3000"
 const Search = () => {
   const [listings, setListings] = useState([]);
   const [addressFilter, setAddressFilter] = useState('');

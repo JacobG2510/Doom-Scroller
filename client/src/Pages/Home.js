@@ -10,7 +10,7 @@ export default function Home() {
       <h2>Are you Ready?</h2>
       <p className="hero__description">Impossible Prices
       </p>
-      <button className="main__btn"><Link to="/search">Explore</Link></button>
+      <Link to="/search"><button className="main__btn">Explore</button></Link>
     </div>
   </div>
   <div className="main" id="sign-up">
