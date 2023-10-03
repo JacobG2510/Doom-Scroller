@@ -13,9 +13,9 @@ export default function Home() {
       <Link to="/search"><button className="main__btn">Explore</button></Link>
     </div>
   </div>
-  <div className="main" id="sign-up">
-    <div className="main__container">
-      <div className="main__content">
+  {/*<div class="main" id="sign-up">
+    <div class="main__container">
+      <div class="main__content">
         <h2>Sign Up Today</h2>
         <button className="main__btn"><a href="#">Sign Up</a></button>
       </div>
@@ -25,7 +25,7 @@ export default function Home() {
         </div>
       </div>
     </div>
-  </div>
+  </div>*/}
   </div>
   )
 }
