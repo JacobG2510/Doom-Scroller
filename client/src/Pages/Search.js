@@ -2,7 +2,11 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './Search.css'; // Import the CSS file
 import SingleResult from '../Components/SingleResult';
+
+import Auth from '../Components/Auth';
 const apiURL="http://localhost:3001"
+
+
 const Search = () => {
   const [listings, setListings] = useState([]);
   const [addressFilter, setAddressFilter] = useState('');
@@ -14,10 +18,19 @@ const Search = () => {
   const fetchHouseListings = async () => {
     try {
       // Replace 'YOUR_ZILLOW_API_ENDPOINT' with the actual Zillow API endpoint
-      const response = await axios.post(apiURL+"/zillow", {
+      const token = localStorage.getItem('token'); // Retrieve the token from localStorage
+
+      const headers = {
+        'Authorization': `Bearer ${token}`, // Add the token to the Authorization header
+        'Content-Type': 'application/json', // Adjust the content type as needed
+      };
+      
+      const response = await axios.post(apiURL + "/zillow", {
         address: addressFilter,
         minPrice: minPrice,
         maxPrice: maxPrice,
+      }, {
+        headers: headers, // Pass the headers to the Axios request
       });
       console.log(response.data)
       setListings(response.data); // Assuming the API response contains house listings
@@ -29,6 +42,9 @@ const Search = () => {
   const filterListings = () => {
     fetchHouseListings();
   };
+  if(!localStorage.getItem("token")){
+    return <Auth/>
+  }
 
   return (
     <div className="container">

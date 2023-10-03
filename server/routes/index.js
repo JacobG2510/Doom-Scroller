@@ -1,9 +1,14 @@
 var express = require('express');
 var router = express.Router();
+const userRoutes = require("./userRoutes")
+const {zillowAPI}=require("../controllers/zillowControllers")
+const { authMiddleware } = require('../utils/auth');
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+router.use("/users",userRoutes)
+
+router.use(authMiddleware)
+
+router.post("/zillow",zillowAPI)
+
 
 module.exports = router;

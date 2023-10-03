@@ -13,7 +13,7 @@ export default function Home() {
       <button class="main__btn"><Link to="/search">Explore</Link></button>
     </div>
   </div>
-  <div class="main" id="sign-up">
+  {/*<div class="main" id="sign-up">
     <div class="main__container">
       <div class="main__content">
         <h2>Sign Up Today</h2>
@@ -25,7 +25,7 @@ export default function Home() {
         </div>
       </div>
     </div>
-  </div>
+  </div>*/}
   </div>
   )
 }
